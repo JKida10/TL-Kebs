@@ -1,0 +1,277 @@
+h1{
+    text-align: center;
+    font-size: 40pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+    background-image: url("back.jpg");
+    background-position: 0px 265px;
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-bottom: 5px;
+    border-style: outset;
+    border-color: white;
+    background-color:rgb(23, 23, 23);
+    border-width: 3px 3px 0px 3px;
+    color: rgb(255, 255, 255);
+}
+
+h1 span{
+  background-color:rgb(23, 23, 23);
+    padding: 5px;
+    padding-left : 10px;
+    padding-right : 10px;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    border-width: 4px 4px 4px 4px;
+    border-style: outset;
+}
+
+*{
+    background-color: rgb(33, 33, 33);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    color: white;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.tab {
+    overflow: hidden;
+    margin-bottom: 0px;
+    border-color:white;
+    background-image: url("back.jpg");
+    background-position: 0px 155px;
+  }
+
+.tab button{
+    background-color: grey;
+    color: black;
+    font-size: 20pt;
+    border-width: 3px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 0px;
+}
+.tab button:hover {
+    background-color: rgb(96, 96, 96);
+  }
+
+.tab button.active{
+    background-color:rgb(23, 23, 23);
+    color: white;
+    border-color: white;
+}
+
+.tabcontent{
+    display: none;
+}
+
+#logobackground{
+  background-image: url("back.jpg");
+
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:30%;
+    background:none;
+    /* background-image: url("back.jpg"); */
+}
+
+tr{
+  max-height: 100px;
+}
+
+a{
+    white-space: nowrap;
+}
+
+table{
+  border: 3px solid white;
+}
+
+table,th{
+    color: white;
+    /* border-collapse: collapse; */
+    text-align: center;
+    font-size: 15pt;
+    border-spacing: 5px;
+}
+
+th{
+  border: 1px solid white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align: top;
+}
+
+th,th #day-of-week, th #icon{
+  background-color:rgb(23, 23, 23);
+  border-radius: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+td{
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 15pt;
+    /* border: 7px solid black; */
+    /* border: 5px solid rgb(39, 0, 0); */
+    margin: 10px 10px 10px 10px;
+    border-top: 1px solid rgb(33, 33, 33);
+    border-right: 1px solid rgb(33, 33, 33);
+    border-left: 1px solid rgb(33, 33, 33);
+    border-bottom: 1px solid rgb(33, 33, 33);
+    border-radius: 5px;
+    min-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    /* border-radius: 20px; */
+}
+
+tr:hover td,tr:hover p,tr:hover a, tr:hover div#month-pizza-valentino,tr:hover div#ingredients{
+    background-color: rgb(24,22,27);
+    border-collapse: collapse;
+}
+tr:hover td{
+  border-top: 1px solid rgb(166, 148, 196);
+  border-right: 1px solid rgb(166, 148, 196);
+  border-left: 1px solid rgb(166, 148, 196);
+  border-bottom: 1px solid rgb(166, 148, 196);
+  border-collapse: collapse;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+}
+
+.kebsphoto {
+    width: 190px;
+}
+
+.ulotkaphoto {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 25px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  div#month-pizza-valentino{
+    font-weight:700;
+  }
+  div#ingredients{
+    font-size: 12pt; 
+ }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  :focus{
+      outline:none;
+  }
+
+  .open-times{
+      font-size: 25px;
+      white-space: nowrap;
+  }
+
+  #icon{
+    height: 40px;
+    width: auto;
+    padding: 4px;
+  }
