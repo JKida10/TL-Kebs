@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Jaki kebs, wariacie?</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="styles/icon.png">
+</head>
+
+<body>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+
+    </div>
+    <div id="logobackground">
+    <img id="logo" src="resources/transparent.png">
+    </div>
+    <h1><span>Jaki kebs, wariacie?</span></h1>
+
+    <div class="tab">
+        <button id="tlButton" class="tablinks active" onclick="openCity(event, 'Tomaszow')">Tomaszów</button>
+        <button id="rzButton" class="tablinks" onclick="openCity(event, 'Rzeszow')">Rzeszów</button>
+    </div>
+
+    <div id="Tomaszow" class="tabcontent">
+        <h2> Kebab </h2>
+        <table class="center" style="width:100%">
+            <tr>
+                <th><img id="icon" src="resources/blank.png"><br>Nazwa</th>
+                <th><img id="icon" src="resources/icontime.png"><br>Godziny Otwarcia <br> (<span id="day-of-week"></span>)</th>
+                <th><img id="icon" src="resources/flyericon.png"><br>Ulotka</th>
+                <th><img id="icon" src="resources/telephoneicon.png"><br>Numer Telefonu</th>
+                <th><img id="icon" src="resources/packageicon.png"><br>Opakowanie</th>
+                <th><img id="icon" src="resources/interneticon.png"><br>Strona FB/WWW</th>
+                <th><img id="icon" src="resources/blank.png"><br>Inne</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Łasuch</p>
+                    <img class="kebsphoto" src="resources/lasuch.PNG">
+                </td>
+                <td>
+                    <p id="Lasuch" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="lasuchphoto" class="ulotkaphoto" src="resources/lasuch_ulotka.jpg" alt="Łasuch - ulotka"  onclick="showModal(event,'lasuchphoto')">
+                </td>
+                <td><a href="tel:736 734 734">736 734 734</a></td>
+                <td>0,5zł - reklamówka <br> 1zł - opakowanie do frytek</td>
+                <td><a href="https://www.facebook.com/kebablasuch/?ref=page_internal">Łasuch - FB</a> </td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Gardi Premium</p>
+                    <img class="kebsphoto" src="resources/gardi.jpg">
+                </td>
+                <td>
+                    <p id="Gardi" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="gardiphoto" class="ulotkaphoto" src="resources/gardi_ulotka.png" alt="Gardi - ulotka"  onclick="showModal(event,'gardiphoto')">
+                </td>
+                <td><a href="tel:84 664 11 55">84 664 11 55</a></td>
+                <td>1zł - opakowanie do frytek, pizzy, sałatek</td>
+                <td><a href="https://www.facebook.com/Gardi-Premium-KebabPizza-105526570837778">Gardi Premium - FB</a> </td>
+                <td id="gardi-promo"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Antalya</p>
+                    <img class="kebsphoto" src="resources/antalya.png">
+                </td>
+                <td>
+                    <p id="Antalya"  class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="antalyaphoto" class="ulotkaphoto" src="resources/antalya_ulotka.png" alt="Antalya - ulotka"  onclick="showModal(event,'antalyaphoto')">
+                </td>
+                <td><a href="tel:571 901 993">571 901 993</a></td>
+                <td>-</td>
+                <td><a href="hhttps://www.facebook.com/kebabtomaszowlubelski/">Antalya - FB</a></td>
+                <td><a href="https://www.pyszne.pl/menu/antalya-doner-kebab-tomaszow-lubelski">Pyszne.pl</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Deshi</p>
+                    <img class="kebsphoto" src="resources/deshi.jpg">
+                </td>
+                <td>
+                    <p id="Deshi" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="deshiphoto" class="ulotkaphoto" src="resources/deshi_ulotka.png" alt="Deshi - ulotka"  onclick="showModal(event,'deshiphoto')">
+                </td>
+                <td><a href="tel:727 834 868*/">727 834 868</a></td>
+                <td>-</td>
+                <td>
+                    <a href="https://www.facebook.com/deshikebabtomaszow">Deshi - FB</a>
+                    <br><br>
+                    <a href="https://tomaszow.deshikebab.pl">Deshi - WWW</a>
+                </td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Istambuł (dawniej Dönër)</p>
+                    <img  class="kebsphoto" src="resources/istambul.jpg">
+                </td>
+                <td>
+                    <p id="Istambul" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    Nie majom ulotki biedaki
+                    <!-- <img id="istambulphoto" class="ulotkaphoto" src="resources/istambul_ulotka.png" alt="Istambuł - ulotka"  onclick="showModal(event,'istambulphoto')"> -->
+                </td>
+                <td><a href="tel:889 999 209*/">889 999 209</a></td>
+                <td>-</td>
+                <td><a href="https://m.facebook.comRestauracja-Istambuł-GrillKebab-Tomaszów-Lub-105164757934494/">Istambuł - FB</a> </td>
+                <td>-</td>
+            </tr>
+        </table>
+        <h2> Pizza </h2>
+        <table class="center" style="width:100%">
+            <tr>
+                <th>Nazwa</th>
+                <th>Godziny Otwarcia <br> (<span id="day-of-week-pizza"></span>)</th>
+                <th>Ulotka</th>
+                <th>Numer Telefonu</th>
+                <th>Opakowanie</th>
+                <th>Strona FB/WWW</th>
+                <th>Inne</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Między talerzami</p>
+                    <img class="kebsphoto" src="resources/miedzytalerzami.jpg">
+                </td>
+                <td>
+                    <p id="MiedzyTalerzami" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="miedzytalerzamiphoto" class="ulotkaphoto" src="resources/miedzytalerzami_ulotka.jpg" alt="Między Talerzami - ulotka"  onclick="showModal(event,'miedzytalerzamiphoto')">
+                </td>
+                <td><a href="tel:886 883 553">886 883 553</a></td>
+                <td>2 sosy <br> i opakowanie <br> wliczone w cenę</td>
+                <td><a href="https://www.facebook.com/MiedzyTalerzamiTL/?ref=page_internal">Między Talerzami - FB</a> </td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Valentino <br> (DROŻDŻÓWA)</p>
+                    <img class="kebsphoto" src="resources/valentino.jpg">
+                </td>
+                <td>
+                    <p id="Valentino" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="valentinophoto" class="ulotkaphoto" src="resources/valentino_ulotka.jpg" alt="Valentino - ulotka"  onclick="showModal(event,'valentinophoto')">
+                </td>
+                <td><a href="tel:84 665 82 30">84 665 82 30</a></td>
+                <td>Opakowanie <br> wliczone w cenę</td>
+                <td><a href="https://www.facebook.com/ValentinoPizza/?ref=page_internal">Valentino - FB</a> 
+                    <br><br>
+                    <a href="https://www.valentinopizza.pl">Valentino - WWW</a>
+                </td>
+                <td>Dzisiejsza pizza <br>z kalendarza:<br><br><div id="month-pizza-valentino"></div><div id="ingredients"></div></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Diavolo</p>
+                    <img class="kebsphoto" src="resources/diavolo.jpg">
+                </td>
+                <td>
+                    <p id="Diavolo" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="diavolophoto" class="ulotkaphoto" src="resources/diavolo_ulotka.jpg" alt="Diavolo - ulotka"  onclick="showModal(event,'diavolophoto')">
+                </td>
+                <td><a href="tel:84 664 13 39">84 664 13 39</a></td>
+                <td>Każdy pojemnik sosu 1zł (na wynos)</td>
+                <td><a href="https://www.facebook.com/Pizzeria-Diavolo-324820740889838/">Diavolo - FB</a>
+                    <a href="http://www.pizza-diavolo.pl">Diavolo - WWW</a>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tabasco</p>
+                    <img class="kebsphoto" src="resources/tabasco.jpg">
+                </td>
+                <td>
+                    <p id="Tabasco" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="tabascophoto" class="ulotkaphoto" src="resources/tabasco_ulotka.jpg" alt="Tabasco - ulotka"  onclick="showModal(event,'tabascophoto')">
+                </td>
+                <td><a href="tel:601 510 392">601 510 392</a></td>
+                <td>Opakowanie pizza:<br>Zwykła - 1zł<br>Mega - 2zł</td>
+                <td><a href="https://www.facebook.com/Tabasco-169772066379680/menu/?ref=page_internal">Tabasco - FB</a></td>
+                <td><a href="https://www.pyszne.pl/menu/tabasco-tomaszow-lubelski-lwowska">Pyszne.pl</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Grande</p>
+                    <img class="kebsphoto" src="resources/grande.PNG">
+                </td>
+                <td>
+                    <p id="Grande" class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="grandephoto" class="ulotkaphoto" src="resources/grande_ulotka.jpg" alt="Tabasco - ulotka"  onclick="showModal(event,'grandephoto')">
+                </td>
+                <td><a href="tel:518 518 389">518 518 389</a></td>
+                <td>Opakowanie wliczone w cenę</td>
+                <td><a href="https://www.facebook.com/GPizzaTL">Grande - FB</a>
+                    <br><br>
+                    <a href="http://www.grandepizza.info">Grande - WWW</a>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+            <td>
+                    <p>Toscana</p>
+                    <img class="kebsphoto" src="resources/toscana.jpg">
+                </td>
+                <td>
+                    <p id="Toscana"  class="open-times"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="toscanaphoto" class="ulotkaphoto" src="resources/toscana_ulotka.jpg" alt="Toscana - ulotka"  onclick="showModal(event,'toscanaphoto')">
+                </td>
+                <td><a href="tel:795 709 709">795 709 709</a></td>
+                <td>0,5zł - reklamówka <br> 1zł - opakowanie do frytek</td>
+                <td><a href="https://www.facebook.com/Toscana-636865179707676/">Toscana - FB</a></td>
+                <td>Opakowanie - 1zł</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="Rzeszow" class="tabcontent">
+        <table class="center" style="width:100%">
+            <tr>
+                <th>Nazwa</th>
+                <th>Godziny Otwarcia <br> (<span id="day-of-week"></span>)</th>
+                <th>Ulotka</th>
+                <th>Numer Telefonu</th>
+                <th>Opakowanie</th>
+                <th>Strona FB/WWW</th>
+                <th>Inne</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Między talerzami</p>
+                    <img class="kebsphoto" src="resources/miedzytalerzami.jpg">
+                </td>
+                <td>
+                    <p class="open-timeses"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="miedzytalerzamiphoto" class="ulotkaphoto" src="resources/miedzytalerzami_ulotka.jpg" alt="Między Talerzami - ulotka"  onclick="showModal(event,'lasuchphoto')">
+                </td>
+                <td><a href="tel:736 734 734">736 734 734</a></td>
+                <td>0,5zł - reklamówka <br> 1zł - opakowanie do frytek</td>
+                <td><a href="https://www.facebook.com/kebablasuch/?ref=page_internal">Łasuch - FB</a> </td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Valentino</p>
+                    <img class="kebsphoto" src="resources/valentino.jpg">
+                </td>
+                <td>
+                    <p class="open-timeses"></p>
+                    <p class="is-open"></span></td>
+                <td>
+                    <img id="miedzytalerzamiphoto" class="ulotkaphoto" src="resources/valentino_ulotka.jpg" alt="Valentino - ulotka"  onclick="showModal(event,'lasuchphoto')">
+                </td>
+                <td><a href="tel:736 734 734">736 734 734</a></td>
+                <td>0,5zł - reklamówka <br> 1zł - opakowanie do frytek</td>
+                <td><a href="https://www.facebook.com/kebablasuch/?ref=page_internal">Łasuch - FB</a> </td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="fileDisplayArea"></div>
+
+
+
+    <script>
+
+        function openCity(event, cityName) {
+            var i, tablinks, tabcontent;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            event.currentTarget.className += " active";
+
+        }
+        document.getElementById('tlButton').click();
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        function showModal(event,imageId){
+        var img = document.getElementById(imageId);
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        function setDate() {
+            var d = new Date();
+            var n = d.getDay();
+            var monthDat = d.getDate();
+            var day = document.getElementById('day-of-week');
+            var day2 = document.getElementById('day-of-week-pizza');
+            var gardiPromo = document.getElementById("gardi-promo");
+            var monthPizza = document.getElementById("month-pizza-valentino");
+            var monthPizzaIngredients = document.getElementById("ingredients");
+            var pizzas = ["Valentino", "Tomaszowska", "Wegetariańska", "Zemsta Kucharza", "Szlachecka / Total Salami", "Tylko dla Orłów", "Farmerska", "Romantyczna", "Stary człowiek i morze", "Kubuś Puchatek (w kształcie misia)", "Boczkowa", "Chłopska", "Kurcze Tomaszowska", "Kurcze pieczone", "Turek", "Będzie piekło", "Będzie niebo", "Czosnek w Bolonii", "Zwierzyniec", "Uśmiech Boryny", "Czort", "Swojska", "Prezesa", "Polska", "Modena", "Feta rakieta", "Feta u szpinaka", "Gorący boczek", "Kurcze dobra", "Sweet-HOT!", "Rukola"];
+            var ingredients = ["Szynka, kiełbasa, pieczarki, kukurydza, papryka, cebula", "Szynka, pieczarki, kukurydza", "Pieczarki, kukurydza, papryka, cebula", "Salami, pieczarki, czosnek, papryka, cebula, sos Tabasco", "Dużo szynki lub salami", "Szynka, salami, boczek, pieczarki, kukurydza, groszek, czosnek, papryka, cebula", "Kiełbasa, boczek, czosnek, papryka, cebula", "Szynka, ananas, kukurydza", "Tuńczyk, pieczarki, oliwki zielone, cebula", "Pyszne serowe uszy, kukurydza, oliwkowe oczy, paprykowy uśmiech i okrągły nosek salami", "Ser, sos, boczek, salami, pieczarki, kukurydza, cebula", "Szynka, salami, pieczarki, kukurydza, papryka, cebula, kapusta pekińska, pomidor świeży", "Kurczak grillowany, pieczarki, kukurydza", "Kurczak, kukurydza, groszek, cebula", "Mięso kebab, pieczarki, papryka, cebula, pomidor świeży, szczypiorek", "Salami, pieczarki, kukurydza, cebula, sambal, peperoni krojone, jalapeno", "sos barbecue, kurczak, kukurydza, ananas", "Sos boloński z mięsem mielonym, czosnek wyciskany, chili", "Szynka, salami, boczek, kiełbasa, polędwica", "Polędwica, pieczarki, pomidor pieczony, cebula, pieprz czarny", "Boczek, cebula, papryczki piri-piri, pepperoni krojone, chili", "Baleron, pieczarki, kukurydza, pomidor pieczony, szczypiorek", "Salami, boczek, pieczarki, cebula, majonez zapiekany, chili", "Szynka, pieczarki, groszek, brokuły, mini kolby kukurydzy, pomidor pieczony", "Salami, oliwki czarne, pomidor pieczony, papryka, cebula biała", "Szynka, ser feta, ogórek, pomidor pieczony, szczypiorek", "Szpinak, mięso drobiowe kebab, ser feta, mini kolby kukurydzy, pomidor pieczony", "Boczek, salami, oliwki czarne, czerwona cebula, jalapeno, chili", "Ser, sos, kurczak grillowany, pieczarki, kukurydza, czosnek, ogórek konserwowy", "Sos barbecue, kurczak grillowany, papryka świeża, kukurydza, cebula czerwona, jalapeno siekane, sos Tabasco", "Kurczak grillowany, pieczarki, cebula czerwona, rukola, pomidor świeży"];
+
+            monthPizza.innerText = pizzas[monthDat];
+            monthPizzaIngredients.innerText = ingredients[monthDat];
+
+            switch (n) {
+                case 1:
+                    day.innerHTML = "Poniedziałek";
+                    day2.innerHTML = "Poniedziałek";
+                    gardiPromo.innerHTML = "- dwa <br> duże kebaby <br> za 22zł";
+                    break;
+                case 2:
+                    day.innerHTML = "Wtorek";
+                    day2.innerHTML = "Wtorek";
+                    gardiPromo.innerHTML = "- dwie pizze: <br>XXL - 60zł<br>Duże - 33zł<br>Małe - 23zł";
+                    break;
+                case 3:
+                    day.innerHTML = "Środa";
+                    day2.innerHTML = "Środa";
+                    gardiPromo.innerHTML = "- dwa <br> duże dania <br> za 33zł";
+                    break;
+                case 4:
+                    day.innerHTML = "Czwartek";
+                    day2.innerHTML = "Czwartek";
+                    gardiPromo.innerHTML = "- dwa <br> małe dania <br> za 28zł";
+                    break;
+                case 5:
+                    day.innerHTML = "Piątek";
+                    day2.innerHTML = "Piątek";
+                    gardiPromo.innerHTML = "- dwie sałatki <br> za 28zł";
+                    break;
+                case 6:
+                    day.innerHTML = "Sobota";
+                    day2.innerHTML = "Sobota";
+                    break;
+                case 7:
+                    day.innerHTML = "Niedziela";
+                    day2.innerHTML = "Niedziela";
+                    break;
+
+                default:
+                    day.innerHTML = "Poniedziałek";
+                    day2.innerHTML = "Poniedziałek";
+                    break;
+            }
+            gardiPromo.innerHTML= "Dzisiejsza promocja " + gardiPromo.innerHTML;
+        }
+        function setOpenTimes() {
+            var d = new Date();
+            var weekDay = d.getDay();
+            var currentHour = d.getHours();
+            var currentMinute = d.getMinutes();
+            var openHours = document.getElementsByClassName("open-times");
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(openTimesXml,"text/xml");
+            var isOpen = document.getElementsByClassName("is-open");
+
+            for (var i = 0; i < openHours.length; i++) {
+                var openTime = xmlDoc.getElementsByTagName(openHours[i].id)[0].childNodes[0].childNodes[weekDay-1].childNodes[0].childNodes[0].nodeValue;
+                var closeTime = xmlDoc.getElementsByTagName(openHours[i].id)[0].childNodes[0].childNodes[weekDay-1].childNodes[1].childNodes[0].nodeValue;
+
+                if ((openTime.slice(0,2)>closeTime.slice(0,2)) && currentHour > openTime.slice(0,2))
+                {
+                   isOpen[i].innerText = " (Otwarte)";
+                   isOpen[i].style.color="green";
+                } else if ((currentHour >= openTime.slice(0,2)) && (currentHour <closeTime.slice(0,2))){
+                   isOpen[i].innerText = " (Otwarte)";
+                   isOpen[i].style.color="green";
+                }
+                else {
+                   isOpen[i].innerText = " (Zamknięte)";
+                   isOpen[i].style.color="red";
+                }
+
+                openHours[i].innerHTML = openTime + '-' + closeTime;
+            }
+        }
+
+        function setPromotions(){
+            
+        }
+
+        openTimesXml="<Kebses><Lasuch><OpenTimes><Pon><Open>10:00</Open><Close>22:00</Close></Pon><Wt><Open>10:00</Open><Close>22:00</Close></Wt><Sr><Open>10:00</Open><Close>22:00</Close></Sr><Czw><Open>10:00</Open><Close>22:00</Close></Czw><Pt><Open>10:00</Open><Close>22:45</Close></Pt><Sob><Open>10:00</Open><Close>22:45</Close></Sob><Ndz><Open>16:00</Open><Close>22:00</Close></Ndz></OpenTimes></Lasuch><Gardi><OpenTimes><Pon><Open>10:00</Open><Close>22:00</Close></Pon><Wt><Open>10:00</Open><Close>22:00</Close></Wt><Sr><Open>10:00</Open><Close>22:00</Close></Sr><Czw><Open>10:00</Open><Close>22:00</Close></Czw><Pt><Open>10:00</Open><Close>23:00</Close></Pt><Sob><Open>10:00</Open><Close>23:00</Close></Sob><Ndz><Open>12:00</Open><Close>22:00</Close></Ndz></OpenTimes></Gardi><Antalya><OpenTimes><Pon><Open>10:00</Open><Close>23:00</Close></Pon><Wt><Open>10:00</Open><Close>23:00</Close></Wt><Sr><Open>10:00</Open><Close>23:00</Close></Sr><Czw><Open>10:00</Open><Close>23:00</Close></Czw><Pt><Open>10:00</Open><Close>24:00</Close></Pt><Sob><Open>10:00</Open><Close>24:00</Close></Sob><Ndz><Open>12:00</Open><Close>23:00</Close></Ndz></OpenTimes></Antalya><Deshi><OpenTimes><Pon><Open>11:00</Open><Close>22:00</Close></Pon><Wt><Open>11:00</Open><Close>22:00</Close></Wt><Sr><Open>11:00</Open><Close>22:00</Close></Sr><Czw><Open>11:00</Open><Close>22:00</Close></Czw><Pt><Open>11:00</Open><Close>22:00</Close></Pt><Sob><Open>11:00</Open><Close>22:00</Close></Sob><Ndz><Open>12:00</Open><Close>22:00</Close></Ndz></OpenTimes></Deshi><Istambul><OpenTimes><Pon><Open>11:00</Open><Close>23:00</Close></Pon><Wt><Open>11:00</Open><Close>23:00</Close></Wt><Sr><Open>11:00</Open><Close>23:00</Close></Sr><Czw><Open>11:00</Open><Close>23:00</Close></Czw><Pt><Open>11:00</Open><Close>23:00</Close></Pt><Sob><Open>11:00</Open><Close>23:00</Close></Sob><Ndz><Open>00:00</Open><Close>23:00</Close></Ndz></OpenTimes></Istambul><MiedzyTalerzami><OpenTimes><Pon><Open>11:00</Open><Close>21:00</Close></Pon><Wt><Open>11:00</Open><Close>21:00</Close></Wt><Sr><Open>11:00</Open><Close>21:00</Close></Sr><Czw><Open>11:00</Open><Close>21:00</Close></Czw><Pt><Open>11:00</Open><Close>21:00</Close></Pt><Sob><Open>14:00</Open><Close>21:00</Close></Sob><Ndz><Open>12:00</Open><Close>21:00</Close></Ndz></OpenTimes></MiedzyTalerzami><Valentino><OpenTimes><Pon><Open>10:00</Open><Close>22:00</Close></Pon><Wt><Open>10:00</Open><Close>22:00</Close></Wt><Sr><Open>10:00</Open><Close>22:00</Close></Sr><Czw><Open>10:00</Open><Close>22:00</Close></Czw><Pt><Open>10:00</Open><Close>23:00</Close></Pt><Sob><Open>10:00</Open><Close>23:00</Close></Sob><Ndz><Open>11:00</Open><Close>21:00</Close></Ndz></OpenTimes></Valentino><Diavolo><OpenTimes><Pon><Open>11:00</Open><Close>22:30</Close></Pon><Wt><Open>11:00</Open><Close>22:30</Close></Wt><Sr><Open>11:00</Open><Close>22:30</Close></Sr><Czw><Open>11:00</Open><Close>22:30</Close></Czw><Pt><Open>11:00</Open><Close>22:30</Close></Pt><Sob><Open>11:00</Open><Close>22:30</Close></Sob><Ndz><Open>11:00</Open><Close>22:30</Close></Ndz></OpenTimes></Diavolo><Tabasco><OpenTimes><Pon><Open>10:00</Open><Close>23:00</Close></Pon><Wt><Open>10:00</Open><Close>23:00</Close></Wt><Sr><Open>10:00</Open><Close>23:00</Close></Sr><Czw><Open>10:00</Open><Close>23:00</Close></Czw><Pt><Open>10:00</Open><Close>01:00</Close></Pt><Sob><Open>10:00</Open><Close>23:00</Close></Sob><Ndz><Open>10:00</Open><Close>23:00</Close></Ndz></OpenTimes></Tabasco><Grande><OpenTimes><Pon><Open>10:00</Open><Close>22:00</Close></Pon><Wt><Open>10:00</Open><Close>22:00</Close></Wt><Sr><Open>10:00</Open><Close>22:00</Close></Sr><Czw><Open>10:00</Open><Close>22:00</Close></Czw><Pt><Open>10:00</Open><Close>23:00</Close></Pt><Sob><Open>10:00</Open><Close>24:00</Close></Sob><Ndz><Open>11:30</Open><Close>22:00</Close></Ndz></OpenTimes></Grande><Toscana><OpenTimes><Pon><Open>12:00</Open><Close>20:00</Close></Pon><Wt><Open>12:00</Open><Close>20:00</Close></Wt><Sr><Open>12:00</Open><Close>20:00</Close></Sr><Czw><Open>12:00</Open><Close>20:00</Close></Czw><Pt><Open>12:00</Open><Close>20:00</Close></Pt><Sob><Open>12:00</Open><Close>20:00</Close></Sob><Ndz><Open>12:00</Open><Close>20:00</Close></Ndz></OpenTimes></Toscana></Kebses>"
+        setDate();
+        setOpenTimes();
+        
+    </script>
+</body>
+
+</html>
